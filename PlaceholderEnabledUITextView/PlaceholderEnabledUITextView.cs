@@ -1,11 +1,14 @@
 ﻿namespace PlaceholderEnabledUITextView
 {
     using System;
+    using System.ComponentModel;
 
     using CoreGraphics;
     using Foundation;
     using UIKit;
 
+    [Register("PlaceholderEnabledUITextView")]
+    [DesignTimeVisible(true)]
     public class PlaceholderEnabledUITextView : UITextView
     {
         private UILabel placeholder;
@@ -40,12 +43,20 @@
             this.CommonInit();
         }
 
+        [Export("Placeholder")]
+        [Browsable(true)]
         public string Placeholder { get; set; }
 
+        [Export("PlaceholderColor")]
+        [Browsable(true)]
         public UIColor PlaceholderColor { get; set; }
 
+        [Export("PlaceholderFont")]
+        [Browsable(true)]
         public UIFont PlaceholderFont { get; set; }
 
+        [Export("AllowWhiteSpace")]
+        [Browsable(true)]
         public bool AllowWhiteSpace { get; set; }
 
         public override void LayoutSubviews()
