@@ -1,7 +1,5 @@
 Add the component to your designer however you want. The namespace, class name, and export name are all `PlaceholderEnabledUITextView`.
 
-The control is marked as `Editable` by default. 
-
 The control has four properties:
 
 **Placeholder** 
